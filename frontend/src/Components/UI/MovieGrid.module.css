@@ -1,0 +1,98 @@
+.movieList-grid {
+  /*---------------Alternative approach but require more media queries-----------------------------------*/
+  /* display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 2%;
+    margin-bottom: 3rem; 
+    ---------------------------------------------------------------------------------------------------------*/
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 3rem;
+}
+
+.btn-trailer {
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding: 0.5rem 1.8rem;
+  background-color: var(--brandColor);
+  color: var(--txt-color);
+  font-family: var(--font-family);
+  text-decoration: none;
+  border-radius: 30px;
+  cursor: pointer;
+  outline: 0;
+  border: 4px solid transparent;
+  box-shadow: 0px 0px 7px 8px #ff00004d;
+  transition: box-shadow 0.3s ease-in;
+}
+.btn-trailer {
+  margin-left: 1rem;
+  border: 3px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  box-shadow: unset;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-trailer:hover {
+  box-shadow: unset;
+  color: var(--brandColor);
+  background-color: var(--txt-color);
+}
+
+.btn-more {
+  padding: 0.25rem 1.5rem;
+  font-size: 1rem;
+  border-width: 2px;
+  margin-left: 0;
+}
+.movieList-loadMore {
+  text-align: center;
+}
+.low-body {
+  position: relative;
+  z-index: 9;
+}
+
+.movie-search {
+  /* flex: 1; */
+  flex-basis: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  width: 350px;
+  padding: 0 0.5rem;
+  border-radius: 30px;
+}
+input {
+  width: 100%;
+  height: 2rem;
+  padding: 0rem 0.75rem;
+  border-radius: 30px;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  color: var(--color2);
+  border: 1px solid var(--color3);
+  background: #fff;
+  border: none;
+  outline: none;
+}
+.search-btn {
+  color: #adb5bd;
+  margin-right: auto;
+}
+
+@media (max-width: 800px) {
+  .movie-search {
+    flex-basis: 60%;
+  }
+}
+@media (max-width: 500px) {
+  .movie-search {
+    flex-basis: 100%;
+    order: 3;
+  }
+}

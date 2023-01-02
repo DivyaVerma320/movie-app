@@ -1,0 +1,185 @@
+.per {
+  margin-bottom: 3rem;
+}
+
+/* div.swiper-button-next:hover,
+div.swiper-button-prev:hover {
+  transform: scale(1.2);
+  transition: all 450ms;
+}
+
+div.swiper-button-next,
+div.swiper-button-prev {
+  color: rgb(255, 255, 255);
+  top: 40%;
+} */
+/* div.button-next2,
+div.button-prev2 {
+  top: 40%;
+} */
+/* .my {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+.items-container {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 9rem 0;
+  position: relative;
+}
+.items-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* ---------------Alternative approach for darken a bg-ing without affectng text-------------------------- */
+/* .items-container{
+     content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    } 
+  
+    .items-container > * {
+    position: relative;
+    z-index: 2;
+  } */
+/* --------------------------------------------------------------------------------------------------------- */
+.items-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-image: linear-gradient(to top, #0f0f0f, rgba(0, 0, 0, 0));
+}
+.details-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.info {
+  flex-basis: 48%;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: auto;
+  padding: 0 4rem;
+}
+
+.title {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  padding-top: 1.5rem;
+  line-height: 1;
+}
+.info h2 {
+  margin: 0;
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.title-details {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  margin-top: 3rem;
+  font-weight: 700;
+}
+.btns {
+  grid-row: 3/4;
+  grid-column: 1/2;
+  margin-top: 3rem;
+}
+.btn-now,
+.btn-trailer {
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding: 0.5rem 1.8rem;
+  background-color: var(--brandColor);
+  color: var(--txt-color);
+  font-family: var(--font-family);
+  text-decoration: none;
+  border-radius: 30px;
+  cursor: pointer;
+  outline: 0;
+  border: 4px solid transparent;
+  box-shadow: 0px 0px 7px 8px #ff00004d;
+  transition: box-shadow 0.3s ease-in;
+}
+
+.btn-now:hover {
+  box-shadow: 0px 0px 7px 15px #ff00004d;
+}
+
+.btn-trailer {
+  margin-left: 1rem;
+  border: 3px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  box-shadow: unset;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-trailer:hover {
+  box-shadow: unset;
+  color: var(--brandColor);
+  background-color: var(--txt-color);
+}
+
+.poster {
+  flex-basis: 48%;
+}
+.poster img {
+  width: 400px;
+  border-radius: 30px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+@media (max-width: 1020px) {
+  html {
+    font-size: 80%;
+  }
+  .poster {
+    display: none;
+  }
+  .info {
+    flex-basis: 75%;
+  }
+  .info h2 {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 60%;
+  }
+  .info {
+    flex-basis: 100%;
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width: 340px) {
+  .info {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 310px) {
+  .info {
+    padding: 0 1rem;
+  }
+}

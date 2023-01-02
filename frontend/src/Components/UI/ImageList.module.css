@@ -1,0 +1,10 @@
+.movie-gallery {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+.gallery-title {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
